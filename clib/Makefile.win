@@ -1,0 +1,91 @@
+# Project: ANCM_Lib_Win64
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ANCM_GetDeltaFSt.o ANCM_GetGeometryData.o ANCM_GetLPdSt.o ANCM_GetNoiseSeg.o ANCM_GetNoiseSeg_data.o ANCM_GetNoiseSeg_emxAPI.o ANCM_GetNoiseSeg_emxutil.o ANCM_GetNoiseSeg_initialize.o ANCM_GetNoiseSeg_rtwutil.o ANCM_GetNoiseSeg_terminate.o cosd.o find.o ifWhileCond.o mrdivide_helper.o norm.o rt_nonfinite.o rtGetInf.o rtGetNaN.o sind.o strcmp.o validate_print_arguments.o main.o
+LINKOBJ  = ANCM_GetDeltaFSt.o ANCM_GetGeometryData.o ANCM_GetLPdSt.o ANCM_GetNoiseSeg.o ANCM_GetNoiseSeg_data.o ANCM_GetNoiseSeg_emxAPI.o ANCM_GetNoiseSeg_emxutil.o ANCM_GetNoiseSeg_initialize.o ANCM_GetNoiseSeg_rtwutil.o ANCM_GetNoiseSeg_terminate.o cosd.o find.o ifWhileCond.o mrdivide_helper.o norm.o rt_nonfinite.o rtGetInf.o rtGetNaN.o sind.o strcmp.o validate_print_arguments.o main.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ANCM_Lib_Win64.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+ANCM_GetDeltaFSt.o: ANCM_GetDeltaFSt.c
+	$(CC) -c ANCM_GetDeltaFSt.c -o ANCM_GetDeltaFSt.o $(CFLAGS)
+
+ANCM_GetGeometryData.o: ANCM_GetGeometryData.c
+	$(CC) -c ANCM_GetGeometryData.c -o ANCM_GetGeometryData.o $(CFLAGS)
+
+ANCM_GetLPdSt.o: ANCM_GetLPdSt.c
+	$(CC) -c ANCM_GetLPdSt.c -o ANCM_GetLPdSt.o $(CFLAGS)
+
+ANCM_GetNoiseSeg.o: ANCM_GetNoiseSeg.c
+	$(CC) -c ANCM_GetNoiseSeg.c -o ANCM_GetNoiseSeg.o $(CFLAGS)
+
+ANCM_GetNoiseSeg_data.o: ANCM_GetNoiseSeg_data.c
+	$(CC) -c ANCM_GetNoiseSeg_data.c -o ANCM_GetNoiseSeg_data.o $(CFLAGS)
+
+ANCM_GetNoiseSeg_emxAPI.o: ANCM_GetNoiseSeg_emxAPI.c
+	$(CC) -c ANCM_GetNoiseSeg_emxAPI.c -o ANCM_GetNoiseSeg_emxAPI.o $(CFLAGS)
+
+ANCM_GetNoiseSeg_emxutil.o: ANCM_GetNoiseSeg_emxutil.c
+	$(CC) -c ANCM_GetNoiseSeg_emxutil.c -o ANCM_GetNoiseSeg_emxutil.o $(CFLAGS)
+
+ANCM_GetNoiseSeg_initialize.o: ANCM_GetNoiseSeg_initialize.c
+	$(CC) -c ANCM_GetNoiseSeg_initialize.c -o ANCM_GetNoiseSeg_initialize.o $(CFLAGS)
+
+ANCM_GetNoiseSeg_rtwutil.o: ANCM_GetNoiseSeg_rtwutil.c
+	$(CC) -c ANCM_GetNoiseSeg_rtwutil.c -o ANCM_GetNoiseSeg_rtwutil.o $(CFLAGS)
+
+ANCM_GetNoiseSeg_terminate.o: ANCM_GetNoiseSeg_terminate.c
+	$(CC) -c ANCM_GetNoiseSeg_terminate.c -o ANCM_GetNoiseSeg_terminate.o $(CFLAGS)
+
+cosd.o: cosd.c
+	$(CC) -c cosd.c -o cosd.o $(CFLAGS)
+
+find.o: find.c
+	$(CC) -c find.c -o find.o $(CFLAGS)
+
+ifWhileCond.o: ifWhileCond.c
+	$(CC) -c ifWhileCond.c -o ifWhileCond.o $(CFLAGS)
+
+mrdivide_helper.o: mrdivide_helper.c
+	$(CC) -c mrdivide_helper.c -o mrdivide_helper.o $(CFLAGS)
+
+norm.o: norm.c
+	$(CC) -c norm.c -o norm.o $(CFLAGS)
+
+rt_nonfinite.o: rt_nonfinite.c
+	$(CC) -c rt_nonfinite.c -o rt_nonfinite.o $(CFLAGS)
+
+rtGetInf.o: rtGetInf.c
+	$(CC) -c rtGetInf.c -o rtGetInf.o $(CFLAGS)
+
+rtGetNaN.o: rtGetNaN.c
+	$(CC) -c rtGetNaN.c -o rtGetNaN.o $(CFLAGS)
+
+sind.o: sind.c
+	$(CC) -c sind.c -o sind.o $(CFLAGS)
+
+strcmp.o: strcmp.c
+	$(CC) -c strcmp.c -o strcmp.o $(CFLAGS)
+
+validate_print_arguments.o: validate_print_arguments.c
+	$(CC) -c validate_print_arguments.c -o validate_print_arguments.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
